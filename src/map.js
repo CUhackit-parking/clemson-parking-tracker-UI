@@ -18,7 +18,15 @@ map.on('load', () => {
         'type': 'fill',
         'source': 'parking-lots',
         'paint': {
-        'fill-color': '#888888',
+        'fill-color': [
+            'interpolate',
+            ['linear'],
+            ['/', ['get', 'count'], ['get', 'capacity']],
+            0.0,
+            '#00ff00',
+            1.0,
+            '#ff0000'
+        ],
         'fill-opacity': 0.4,
         },
         'filter': ['==', '$type', 'Polygon']
