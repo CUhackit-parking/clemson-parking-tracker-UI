@@ -40,10 +40,22 @@ map.on('load', () => {
 
 let hoveredStateId = null;
 
+const nameDisplay = document.getElementById('name');
+const capacityDisplay = document.getElementById('capacity');
+const spotsDisplay = document.getElementById('spots');
+
 map.on('mousemove', 'lot-boundary', (e) => {
   map.getCanvas().style.cursor = 'pointer';
 
+  const name = e.features[0].properties.name;
+  const capacity = e.features[0].properties.capacity;
+  const spots = e.features[0].properties.count;
+
   if (e.features.length > 0) {
+    nameDisplay.textContent = name;
+    capacityDisplay.textContent = capacity;
+    spotsDisplay.textContent = spots;
+
     if (hoveredStateId !== null) {
         map.setFeatureState(
             { source: 'parking-lots', id: hoveredStateId },
@@ -66,6 +78,10 @@ map.on('mouseleave', 'lot-boundary', () => {
             { source: 'parking-lots', id: hoveredStateId },
             { hover: false }
         );
+
+        nameDisplay.textContent = "";
+        capacityDisplay.textContent = "";
+        spotsDisplay.textContent = "";
     }
     hoveredStateId = null;
 });
