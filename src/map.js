@@ -9,7 +9,7 @@ const map = new mapboxgl.Map({
 map.on('load', () => {
     map.addSource('parking-lots', {
     'type': 'geojson',
-    'data': '../data/map.geojson',
+    'data': '/data/map.geojson',
     'generateId': true
     })
 
