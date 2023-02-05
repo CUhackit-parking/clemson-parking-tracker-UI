@@ -63,7 +63,7 @@ map.on('mousemove', 'lot-boundary', (e) => {
 
   const name = e.features[0].properties.name;
   const capacity = e.features[0].properties.capacity;
-  const spots = e.features[0].properties.count;
+  const spots = capacity - e.features[0].properties.count;
 
   if (e.features.length > 0) {
     nameDisplay.textContent = name;
