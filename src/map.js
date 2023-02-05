@@ -44,6 +44,11 @@ map.on('load', () => {
         ]
         }
     });
+
+    const timer = setInterval(() => {
+        console.log("test")
+        map.getSource('parking-lots').setData('/data/map.geojson');
+    }, 5000);
 });
 
 let hoveredStateId = null;

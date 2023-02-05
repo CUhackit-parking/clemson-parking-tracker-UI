@@ -43,7 +43,7 @@
         "type": "commuter",
         "name": "C-2A",
         "capacity": 56,
-        "count": 50
+        "count": 20
       },
       "geometry": {
         "coordinates": [
