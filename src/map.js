@@ -47,8 +47,8 @@ map.on('load', () => {
     });
 
     const timer = setInterval(() => {
-        console.log("test")
-        map.getSource('parking-lots').setData('/data/map.geojson');
+        console.log("Getting data")
+        map.getSource('parking-lots').setData('https://api.clemsonparking.tech');
     }, 5000);
 });
 
