@@ -10,7 +10,7 @@ map.on('load', () => {
     map.addSource('parking-lots', {
     'type': 'geojson',
     // 'data': '/data/map.geojson',
-    'data': 'http://api.clemsonparking.tech',
+    'data': 'https://api.clemsonparking.tech',
     'generateId': true
     })
 
