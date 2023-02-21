@@ -1,4 +1,4 @@
-mapboxgl.accessToken = 'pk.eyJ1Ijoiam9obnB0dXJuZXI4IiwiYSI6ImNsZHFiMWhyYzFiamwzcXE3a3VwaG9yN2gifQ.DWvAJUEiTitddiRPV3BSog';
+mapboxgl.accessToken = 'pk.eyJ1Ijoiam9obnB0dXJuZXI4IiwiYSI6ImNsZWVtbjg0OTBpOW4zdnFtOTk2ZXU5d3cifQ.FdEG4cwJ_KmJm4dhbSFGIQ';
 const map = new mapboxgl.Map({
     container: 'map', // container ID
     style: 'mapbox://styles/mapbox/streets-v12', // style URL
@@ -9,7 +9,6 @@ const map = new mapboxgl.Map({
 map.on('load', () => {
     map.addSource('parking-lots', {
     'type': 'geojson',
-    // 'data': '/data/map.geojson',
     'data': 'https://api.clemsonparking.tech',
     'generateId': true
     })
